@@ -3,10 +3,10 @@ let burgerNav = document.getElementById("burger-nav");
 let click = 0;
 burgerMenu.addEventListener("click", () => {
     if (click == 0) {
-        burgerNav.classList.remove("hide");
+        burgerNav.style.display = "block";
         click += 1;
     } else {
-        burgerNav.classList.add("hide");
+        burgerNav.style.display= "none";
         click -= 1;
     }
 })
