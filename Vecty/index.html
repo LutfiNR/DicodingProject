@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smarty</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="brand">Vecty</div>
+        <ul class="navbar">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#course">Course</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#aboutus">About Us</a>
+          </li>
+        </ul>
+        <div id="burger-menu" class="burger-menu">
+          <svg viewBox="0 0 80 60" width="30" height="30">
+            <rect width="100" height="10"></rect>
+            <rect y="25" width="100" height="10"></rect>
+            <rect y="50" width="100" height="10"></rect>
+          </svg>
+        </div>
+      </nav>
+      <ul id="burger-nav" class="burger-nav hide slide-down">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li><a href="#course">Course</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <div class="content">
+        <article id="home" class="home">
+          <div class="container">
+            <div class="left">
+              <h1>
+                Unleash Your
+                <u style="color: rgb(11, 203, 181)">Imagination</u> with
+                Captivating Illustrations.
+              </h1>
+              <p>Let's join us and become great illustrator.</p>
+              <p>
+                <a href="">Get Started</a
+                ><img src="/img/right-arrow.svg" alt="" />
+              </p>
+            </div>
+            <div class="right">
+              <img src="/img/home-img.svg" alt="" />
+            </div>
+          </div>
+        </article>
+        <article class="about-us">
+          <div class="container works">
+            <h1>How It Works</h1>
+            <div class="item">
+              <div>
+                <img src="/img/about-img1.svg" alt="" />
+                <h3>Learn Basic Illustration</h3>
+                <p>
+                  Learn the basics of design how to draw good and correct
+                  illustration
+                </p>
+              </div>
+              <div>
+                <img src="/img/about-img2.svg" alt="" />
+                <h3>Study With Great Illustrations</h3>
+                <p>Here you are taught by great and inspiring illustrators</p>
+              </div>
+              <div>
+                <img src="img/about-img3.svg" alt="" />
+                <h3>Daily Learning Hone Your Skills</h3>
+                <p>
+                  Every day you are given an exercise that will hone your skills
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="container mentor">
+            <div class="left">
+              <h1>
+                Study With
+                <u style="color: rgb(11, 203, 181)">Great</u> illustrators
+              </h1>
+              <p>
+                You can lear with great and best illustrators and are very
+                experienced so that they can help your skills better and more
+                here are also taught tips and tricks in making a good and
+                correct illustrator.
+              </p>
+            </div>
+            <div class="right">
+              <img src="/img/mentor.png" alt="" />
+            </div>
+          </div>
+          <div class="container student">
+            <div class="left">
+              <h1>
+                Various Student Who Have
+                <u style="color: rgb(11, 203, 181)">Achieved</u>
+              </h1>
+              <p>
+                10 thousand students have excelled when they have studied on our
+                course because there is a lot of material that really helps you
+                when you are already working in a company or freelance and there
+                are lots of great and experienced mentors who will help you
+                while you are studying.
+              </p>
+            </div>
+            <div class="right">
+              <img src="/img/student.png" alt="" />
+            </div>
+          </div>
+        </article>
+        <article id="course" class="course">
+          <div class="container courses">
+            <h1>Our Courses</h1>
+            <div class="wrapper">
+              <div class="item-slide fade">
+                <img src="/img/course-color.jpg" alt="" />
+                <h3>How to color a sketch in digital</h3>
+                <p>
+                  Learn about the stages in the coloring process on digital
+                  sketch with software that very cool and easy to use
+                </p>
+                <p>Learn More</p>
+              </div>
+              <div class="item-slide fade">
+                <img src="img/course-trace.png" alt="" />
+                <h3>Learn to trace an image</h3>
+                <p>
+                  Learn the process of tracing a sketch into a digital image
+                  that is very interesting and an easy process to understrand
+                  for beginners
+                </p>
+                <p>Learn More</p>
+              </div>
+              <div class="item-slide fade">
+                <img src="img/course-illustration.jpg" alt="" />
+                <h3>Make illustrations on digital</h3>
+                <p>
+                  The stages of making illustration in digital applications wil
+                  make it faster and the result are satisfying
+                </p>
+                <p>Learn More</p>
+              </div>
+              <div class="item-slide fade">
+                <img src="img/course-digital.jpg" alt="" />
+                <h3>Digital sketch</h3>
+                <p>
+                  Stages of sketching in digital so that it is faster and easier
+                  to convert to various image files
+                </p>
+                <p>Learn More</p>
+              </div>
+            </div>
+            <div class="controler">
+              <button id="prev" class="button prev">
+                <img
+                  src="img/right-arrow.svg"
+                  style="transform: rotate(180deg)"
+                  alt=""
+                />
+              </button>
+              <button id="next" class="button next">
+                <img src="img/right-arrow.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <aside class="contact" id="contact">
+        <div class="container contacts">
+          <h1>Creator</h1>
+          <div class="card">
+            <div class="header">
+              <img src="img/foto.png" alt="" />
+              <h2>Lutfi Nur Rohman</h2>
+            </div>
+            <div class="info">
+              <p>12 February, 2024</p>
+              <p>Jatimulyo, Lampung Selatan, Lampung</p>
+              <p>Indonesia</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer id="aboutus">
+      <div class="social-media">
+        <img src="img/instagram.svg" alt="" />
+        <img src="img/youtube.svg" alt="" />
+        <img src="img/whatsapp.svg" alt="" />
+      </div>
+      <p>&copy; 2023 Pi. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

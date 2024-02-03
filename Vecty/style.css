@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* global */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #27E1C1;
+    --secondary-color: #FF9BD2;
+    --dark-color: #0EA293;
+    --light-color: #fefefe;
+}
+
+
+/* start header navbar*/
+header {
+    background-color: var(--light-color);
+}
+
+nav {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 96px;
+}
+
+nav .brand {
+    display: inherit;
+    align-items: center;
+    font-weight: 700;
+    font-size: large;
+    color: var(--dark-color);
+}
+
+nav .navbar {
+    display: inherit;
+}
+
+nav .navbar li {
+    height: 64px;
+    width: 128px;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.burger-nav {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    background-color: var(--light-color);
+}
+
+.burger-nav li {
+    height: 64px;
+    width: 100%;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+nav .navbar li a,
+.burger-nav li a {
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+    font-weight: 400;
+    padding: 6px 24px;
+}
+
+nav .navbar li a:active,
+nav .navbar li a:hover,
+.burger-nav li a:active {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.slide-down {
+    animation-name: slideDown;
+    animation-duration: 0.7s;
+}
+
+@keyframes slideDown {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* end header navbar */
+
+
+/* start main section */
+.content {
+    padding: 0 96px;
+    background-color: var(--light-color);
+}
+
+.container {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+/* start home section */
+.home {
+    margin-bottom: 48px;
+}
+
+.home .left,
+.home .right {
+    width: 50%;
+    display: inherit;
+}
+
+.home .left {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: rgb(50, 50, 50);
+}
+
+.home p {
+    font-size: 22px;
+    margin-bottom: 36px;
+    align-content: center;
+}
+
+.home p a {
+    text-decoration: underline;
+    color: var(--dark-color);
+    font-size: 26px;
+    font-weight: 500;
+}
+
+/* end home section */
+
+/* start about section */
+.about-us {
+    margin-bottom: 64px;
+}
+
+.about-us .works {
+    flex-direction: column;
+    margin-bottom: 96px;
+}
+
+.about-us .works h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(50, 50, 50);
+    margin-bottom: 24px;
+}
+
+.about-us .works .item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us .works .item div {
+    width: 27%;
+    height: auto;
+    display: inherit;
+    flex-direction: column;
+    border: rgb(200, 200, 200) 1px solid;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.about-us .works .item div:hover {
+    border: rgb(100, 100, 100) 2px solid;
+}
+
+.about-us .works img {
+    max-width: 250px;
+    margin-bottom: 16px;
+}
+
+.about-us .works h3 {
+    color: rgb(50, 50, 50);
+    text-align: center;
+}
+
+.about-us .works p {
+    color: rgb(100, 100, 100);
+    text-align: center;
+}
+
+.about-us .mentor {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.about-us .student {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-direction: row-reverse;
+}
+
+.about-us .left,
+.about-us .right {
+    width: 50%;
+    margin: 0 36px;
+}
+
+.about-us .mentor img,
+.about-us .student img {
+    max-width: 450px;
+}
+
+.about-us .mentor h1,
+.about-us .mentor p {
+    text-align: end;
+}
+
+.about-us .mentor h1,
+.about-us .student h1 {
+    color: rgb(50, 50, 50);
+    margin-bottom: 12px;
+    font-size: 40px;
+}
+
+.about-us .student p,
+.about-us .mentor p {
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+}
+
+/* end about section */
+
+/* start course section */
+.course {
+    margin-bottom: 64px;
+}
+
+.course .courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: fit-content;
+}
+
+.course .courses h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(50, 50, 50);
+    margin-bottom: 24px;
+}
+
+.course .courses .wrapper {
+    display: flex;
+    width: 60%;
+}
+
+.course .courses .wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.course .courses .item-slide {
+    display: none;
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.course .courses .item-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.course .courses .item-slide h3 {
+    color: rgb(50, 50, 50);
+}
+
+.course .courses .item-slide p {
+    color: rgb(100, 100, 100);
+    text-align: justify;
+}
+
+.course .courses .item-slide p:last-child {
+    text-decoration: underline;
+    margin-top: 4px;
+    color: var(--dark-color);
+    text-align: justify;
+}
+
+.course .courses .controler {
+    margin-top: 24px;
+    display: flex;
+}
+
+.controler .button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
+    border: var(--dark-color) 1px solid;
+    background-color: var(--light-color);
+    border-radius: 4px;
+}
+
+.controler .button:active {
+    background-color: #27E1C1;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* end main section */
+
+
+/* start aside */
+.contact {
+    background-color: var(--dark-color);
+    padding: 24px 0;
+}
+
+.contacts {
+    flex-direction: column;
+}
+
+.contacts h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--light-color);
+    margin-bottom: 24px;
+}
+
+.contacts .card {
+    align-self: center;
+    width: auto;
+    padding: 20px;
+    margin: 24px 0;
+}
+
+.contact .contacts .header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact .contacts img {
+    width: 200px;
+    height: 200px;
+}
+
+.contact .contacts .header {
+    color: var(--light-color);
+}
+
+.contact .contacts .info p {
+    margin: 5px 0;
+    text-align: center;
+    color: var(--light-color);
+}
+
+/* end aside */
+
+/* start footer */
+footer {
+    background-color: var(--dark-color);
+    text-align: center;
+    color: var(--light-color);
+}
+
+footer .social-media {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+footer .social-media img {
+    margin: 12px;
+    width: 25px;
+    height: auto;
+}
+
+/* end footer */
+
+/* responsive */
+/* medium */
+@media screen and (max-width: 1024px) {
+
+    /* header */
+    nav {
+        padding: 24px 48px;
+    }
+
+    nav .navbar {
+        display: none;
+    }
+
+    nav .burger-menu {
+        display: flex;
+        width: auto;
+    }
+
+    /* home */
+    .content {
+        padding: 0 48px;
+    }
+
+    .home .container {
+        flex-direction: column-reverse;
+    }
+
+    .home .left,
+    .home .right {
+        width: auto;
+        justify-content: center;
+    }
+
+    .home .right img {
+        max-width: 400px;
+    }
+
+    .home h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .home p {
+        font-size: 16px;
+        margin-bottom: 28px;
+    }
+
+    .home p a {
+        font-size: 20px;
+    }
+
+    /* about */
+    .about-us .works {
+        padding: 0 36px;
+    }
+
+    .about-us .works h1 {
+        font-size: 28px;
+    }
+
+    .about-us .works .item {
+        flex-direction: column;
+    }
+
+    .about-us .works .item div {
+        width: auto;
+        margin-bottom: 24px;
+    }
+
+    .about-us .works h3 {
+        font-size: 18px;
+    }
+
+    .about-us .works p {
+        font-size: 14px;
+    }
+
+    .about-us .mentor {
+        flex-direction: column-reverse;
+    }
+
+    .about-us .student {
+        flex-direction: column-reverse;
+    }
+
+    .about-us .left,
+    .about-us .right {
+        width: auto;
+        margin: 12px 0px;
+    }
+
+    .about-us .mentor img,
+    .about-us .student img {
+        max-width: 350px;
+    }
+
+    .about-us .mentor h1,
+    .about-us .student h1 {
+        margin-bottom: 12px;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .about-us .student p,
+    .about-us .mentor p {
+        font-size: 14px;
+        color: rgb(100, 100, 100);
+        text-align: justify;
+    }
+
+
+    /* course */
+    .course .courses .wrapper {
+        width: 75%;
+    }
+
+    .course .courses h1 {
+        font-size: 28px;
+    }
+
+    .course .courses .wrapper {
+        display: initial;
+        overflow-x: initial;
+    }
+
+    .course .courses .item {
+        margin: 0px 0 48px 0;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .course .courses .item img {
+        margin-bottom: 12px;
+    }
+
+    /* contact */
+    .contacts h1 {
+        font-size: 28px;
+    }
+}
+
+/* small */
+@media screen and (max-width: 640px) {
+
+    /* header */
+    nav {
+        padding: 18px 18px;
+    }
+
+    nav .navbar {
+        display: none;
+    }
+
+    nav .burger-menu {
+        display: flex;
+        width: auto;
+    }
+
+    /* home */
+    .content {
+        padding: 0 24px;
+    }
+
+    .home .container {
+        flex-direction: column-reverse;
+    }
+
+    .home .left,
+    .home .right {
+        width: auto;
+        justify-content: center;
+    }
+
+    .home .right img {
+        max-width: 275px;
+    }
+
+    .home h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .home p {
+        font-size: 14px;
+        margin-bottom: 28px;
+    }
+
+    .home p a {
+        font-size: 18px;
+    }
+
+    /* abouts */
+    .about-us .works h1 {
+        font-size: 24px;
+    }
+
+    .about-us .works .item {
+        flex-direction: column;
+    }
+
+    .about-us .works .item div {
+        width: auto;
+        margin-bottom: 24px;
+    }
+
+    .about-us .works h3 {
+        font-size: 18px;
+    }
+
+    .about-us .works p {
+        font-size: 14px;
+    }
+
+    .about-us .mentor img,
+    .about-us .student img {
+        max-width: 250px;
+    }
+
+    .about-us .mentor h1,
+    .about-us .student h1 {
+        font-size: 24px;
+    }
+
+    .about-us .student p,
+    .about-us .mentor p {
+        font-size: 14px;
+    }
+
+    /* course */
+    .course .courses .wrapper {
+        width: 100%;
+    }
+
+    .course .courses h1 {
+        font-size: 24px;
+    }
+
+    .course .courses .wrapper {
+        display: initial;
+        overflow-x: initial;
+    }
+
+    .course .courses .item {
+        margin: 0px 0 48px 0;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .course .courses .item img {
+        margin-bottom: 12px;
+    }
+
+    /* contact */
+    .contacts h1 {
+        font-size: 24px;
+    }
+}
