@@ -1,14 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookshelfy</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuKuKu</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div>
+        <h1>BuKuKu</h1>
+        <p>A Bookshelf Apps</p>
+      </div>
+      <!-- add button -->
+      <div id="add-button" class="add-button">
+        <img src="assets/add-button.png" alt="add-button" />
+      </div>
+    </header>
 
+    <!-- main -->
+    <main>
+      <!-- form -->
+      <div id="form-container" class="form-container slide-down">
+        <form id="form" action="">
+          <div>
+            <div>
+              <label for="title">Title :</label><br />
+              <input
+                type="text"
+                name="title"
+                id="title"
+                class="input-text"
+                required
+              />
+            </div>
+            <div>
+              <label for="author">Author :</label><br />
+              <input
+                type="text"
+                name="author"
+                id="author"
+                class="input-text"
+                required
+              />
+            </div>
+            <div>
+              <label for="year">Release Year :</label><br />
+              <input
+                type="text"
+                name="year"
+                id="year"
+                class="input-text"
+                required
+              />
+            </div>
+            <div>
+              <label for="iscompleted">Finished Reading</label>
+              <input type="checkbox" name="iscompleted" id="iscompleted" />
+            </div>
+            <div class="btn-container">
+              <button class="button btn-submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- edit form -->
+      <div id="edit-form-container" class="edit-form-container">
+        <form id="edit-form" action="">
+          <div>
+            <div>
+              <label for="edit-title">Title :</label><br />
+              <input
+                type="text"
+                name="edit-title"
+                id="edit-title"
+                class="input-text"
+                required
+              />
+            </div>
+            <div>
+              <label for="edit-author">Author :</label><br />
+              <input
+                type="text"
+                name="edit-author"
+                id="edit-author"
+                class="input-text"
+                required
+              />
+            </div>
+            <div>
+              <label for="edit-year">Release Year :</label><br />
+              <input
+                type="text"
+                name="edit-year"
+                id="edit-year"
+                class="input-text"
+                required
+              />
+            </div>
+            <div class="btn-container">
+              <button class="button btn-cancel" onclick="cancelEdit()">
+                Cancel
+              </button>
+              <button class="button btn-submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Not finished section -->
+      <section>
+        <div class="container">
+          <h1>Not Finished</h1>
+          <div class="item-container" id="not-finished"></div>
+        </div>
+      </section>
+
+      <!-- finished section -->
+      <section>
+        <div class="container">
+          <h1>Finished Reading</h1>
+          <div class="item-container" id="finished"></div>
+        </div>
+      </section>
+    </main>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
