@@ -64,22 +64,22 @@ function addBook() {
     const ID = new Date().getTime();
     const titleBook = document.getElementById("title").value;
     const authorBook = document.getElementById("author").value;
-    const yearBook = document.getElementById("year").value;
-    const isCompleted = document.getElementById("iscompleted").checked;
+    const yearBook = parseInt(document.getElementById("year").value);
+    const isComplete = document.getElementById("iscomplete").checked;
 
-    const bookObject = generateBookObjet(ID, titleBook, authorBook, yearBook, isCompleted);
+    const bookObject = generateBookObjet(ID, titleBook, authorBook, yearBook, isComplete);
     books.push(bookObject);
     document.dispatchEvent(new Event(RENDER_EVENT));
     saveData();
 }
 
-function generateBookObjet(id, title, author, year, isCompleted) {
+function generateBookObjet(id, title, author, year, isComplete) {
     return {
         id,
         title,
         author,
         year,
-        isCompleted
+        isComplete
     }
 }
 function makeElement(item) {
@@ -214,7 +214,7 @@ function editBook(Id) {
     editForm.addEventListener('submit', () => {
         const newTitleBook = document.getElementById("edit-title").value;
         const newAuthorBook = document.getElementById("edit-author").value;
-        const newYearBook = document.getElementById("edit-year").value;
+        const newYearBook = parseInt(document.getElementById("edit-year").value);
         const bookTarget = findBook(Id);
 
         bookTarget.title = newTitleBook;
