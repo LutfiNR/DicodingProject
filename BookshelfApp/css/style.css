@@ -1,0 +1,249 @@
+/* global */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #00B8A9;
+    --secondary-color: #F6416C;
+    --black-color: #363037;
+    --black-second-color: #69656a;
+    --grey-color: #a09ea0;
+    --light-color: #FFF7FF;
+    --gradient: linear-gradient(140deg, #009387 0%, #00B8A9 100%);
+}
+
+body {
+    background-color: var(--light-color);
+}
+
+header {
+    width: auto;
+    padding: 12px 96px;
+    background: var(--gradient);
+    color: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-button {
+    border-radius: 25px;
+    width: min-content;
+    height: min-content;
+}
+
+section {
+    padding: 0 96px;
+    background-color: var(--light-color);
+    box-shadow: 0px 0px 2px 0px var(--grey-color);
+
+}
+
+/* form */
+.form-container {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    color: var(--black-color);
+    z-index: -1;
+    position: relative;
+}
+
+.edit-form-container {
+    width: min-content;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    translate: -50% -50%;
+    top: 50%;
+    box-shadow: 0px 0px 2px 0px var(--grey-color);
+    background-color: var(--light-color);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+}
+
+.form-container form {
+    display: inherit;
+}
+
+form div {
+    margin: 12px 24px;
+}
+
+form .input-text {
+    width: 250px;
+    padding: 6px;
+    border: 1px solid var(--grey-color);
+    border-radius: 4px;
+}
+
+/* end form */
+
+/*  start shelf */
+.container {
+    width: fit-content;
+    height: fit-content;
+    padding: 24px;
+
+}
+
+.container h1 {
+    color: var(--black-color);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 180px;
+    margin: 8px;
+    box-shadow: 0px 0px 2px 0px var(--grey-color);
+    padding: 16px;
+    border-radius: 4px;
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-info {
+    width: auto;
+    height: auto;
+}
+
+.item-info>* {
+    margin-top: 4px;
+}
+
+.item-title {
+    color: var(--black-color);
+    font-size: 18px;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-author,
+.item-year {
+    color: var(--black-second-color);
+    font-size: 14px;
+}
+
+.btn-container {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.button {
+    width: min-content;
+    border: none;
+    border-radius: 4px;
+    height: min-content;
+    cursor: pointer;
+    color: var(--light-color);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-delete {
+    padding: 4px 4px;
+    background: var(--secondary-color);
+}
+
+.btn-cancel {
+    background: var(--secondary-color);
+    padding: 6px 12px;
+}
+
+.btn-change,
+.btn-submit {
+    padding: 6px 12px;
+    background: var(--primary-color);
+}
+
+/* end rak */
+
+/* animation */
+.slide-down {
+    animation: slideDown 0.75s;
+}
+
+@keyframes slideDown {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 400px;
+    }
+}
+
+/* responsive medium */
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 12px 48px;
+    }
+
+    section {
+        padding: 0 48px;
+    }
+
+}
+
+/* respnsive small */
+@media screen and (max-width: 640px) {
+    header {
+        padding: 12px 24px;
+    }
+    section {
+        padding: 0 48px;
+    }
+    .container {
+        width: auto;
+        height: fit-content;
+        padding: 24px;
+    
+    }
+    .container h1, .item-info>*{
+        text-align: center;
+    }
+
+    .form-container form {
+        flex-direction: column;
+    }
+
+    .item-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .item {
+        width: 100%;
+        margin: 8px;
+        box-shadow: 0px 0px 2px 0px var(--grey-color);
+        padding: 16px;
+        border-radius: 4px;
+    }
+}
